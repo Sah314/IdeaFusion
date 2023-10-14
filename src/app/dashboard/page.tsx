@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button } from '../../components/ui/button'
 import { UserButton } from '@clerk/nextjs'
 import { Separator } from '@/components/ui/separator'
+import CreateNoteDialog from '@/components/CreateNoteDialog'
 
 type Props = {}
 
@@ -34,6 +35,9 @@ const Dashboard = (props: Props) => {
            {/* TODO Conditional rendering of notes */}
            <div className='text-bold text-center'>
             <h2 className='text-2xl text-slate-700'>No note yet!</h2>
+           </div>
+           <div className="grid sm:grid-cols-3 md:grid-cols-5 gap-3">
+            <CreateNoteDialog/>
            </div>
         </div>
      </div>

@@ -10,11 +10,13 @@ const TypewriterTitle = (props: Props) => {
         options={
           {
             loop:true,
+            delay:150,
   
           }
         }
         onInit={(Typewriter)=>{
-          Typewriter.typeString("<span>\u{1F680}</span> Turbocharge Your Notes").pauseFor(2000).deleteAll().typeString("<span>🧠</span> Elevate Your Notes: AI-Powered Efficiency").start()
+
+          Typewriter.typeString("Turbocharge Your Notes \u{1F680}").pauseFor(3000).deleteAll().typeString(" Elevate Your Notes: AI-Powered Efficiency 🧠").start()
         }}
       />
   )

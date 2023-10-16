@@ -4,6 +4,9 @@ import { $Note } from "@/lib/schema";
 import { auth } from "@clerk/nextjs";
 import { NextResponse } from "next/server";
 
+export const config = {
+    runtime: "edge",
+  };
 export async function POST(req:Request){
     const {userId} = auth();
     if(!userId){

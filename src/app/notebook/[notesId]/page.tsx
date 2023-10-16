@@ -10,6 +10,7 @@ import { NextResponse } from 'next/server';
 import React from 'react'
 import { clerk } from '@/lib/clerk-server';
 import TiptapEditor from '@/components/TiptapEditor';
+import Deletebutton from '@/components/Deletebutton';
 
 type Props = {
     params:{
@@ -47,7 +48,7 @@ const user = await clerk.users.getUser(userId);
                 <span className='font-semibold'>{user.firstName} {user.lastName}</span>
                 <span className='inline-block mx-1'>/</span>
                 <div className="text-stone-500 font-semibold">{note.name}</div>
-                <div className="ml-auto">DELETE</div>
+                <div className="ml-auto"><Deletebutton NoteId={note.id}/></div>
             </div>
             <div className="h-4"></div>
             <div className="border-stone-200 shadow-xl border rounded-lg px-14 py-8 w-full">

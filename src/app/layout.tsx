@@ -6,8 +6,8 @@ import Provider  from '@/components/Provider'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Noterrr',
-  description: 'Noterrr a notion clone',
+  title: 'IdeaFusion',
+  description: 'IdeaFusion a notion clone',
 }
 
 export default function RootLayout({

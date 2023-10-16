@@ -6,7 +6,6 @@ import {and,eq} from 'drizzle-orm'
 import Link from 'next/link';
 import { redirect } from 'next/navigation';
 import { ArrowLeft } from 'lucide-react';
-import { NextResponse } from 'next/server';
 import React from 'react'
 import { clerk } from '@/lib/clerk-server';
 import TiptapEditor from '@/components/TiptapEditor';

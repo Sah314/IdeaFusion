@@ -91,7 +91,7 @@ useEffect(() => {
         <div className="h-5"></div>
         <span className='text-sm'>
           Tip : Press {" "} <kbd className=' text-md text-gray-800 bg-gray-100 rounded-lg font-semibold'>
-            Shift + A
+            Alt + A
           </kbd>
           {" "} for AI autocomplete
         </span>

@@ -22,6 +22,13 @@ const createNote = useMutation({
     }
 })
 
+const uploadToFirebase =useMutation({
+    mutationFn:async(noteId:string)=>{
+        const response = await axios.post('/api/uploadToFirebase',{
+            noteId
+        })
+    return response.data;}
+})
 const handleSubmit = (e:React.FormEvent<HTMLFormElement>)=>{
 e.preventDefault();
 if(input ===''){
@@ -31,6 +38,10 @@ if(input ===''){
 createNote.mutate(undefined,{
     onSuccess:({note_id})=>{
         console.log("yayyy note created",{note_id});
+        // Hitt another endpoint to cover temp dalle url to permanent
+        uploadToFirebase.mutate(note_id,{
+
+        })
         router.push(`notebook/${note_id}`);
     },
     onError:(error)=>{

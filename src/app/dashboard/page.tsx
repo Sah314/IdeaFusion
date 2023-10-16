@@ -34,7 +34,7 @@ const Dashboard = async(props: Props) => {
                     <div className="w-4"></div>
                     <h1 className=' ml-4 text-3xl font-bold text-slate-700'>My Notes</h1>
                     <div className="w-4"></div>
-                    <UserButton/>
+                    <UserButton afterSignOutUrl='/'/>
                 </div>
             </div>
           <div className='h-7'></div>
